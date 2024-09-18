@@ -23,7 +23,7 @@
             "formatString": "0",
             "sourceProviderType": "int",
             "sourceLineageTag": "CustomerID",
-            "summarizeBy": "none",
+            "summarizeBy": "sum",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
@@ -89,7 +89,7 @@
         "annotations": [
           {
             "name": "IsTableInBiModel",
-            "value": "True"
+            "value": "False"
           }
         ]
       },
@@ -104,7 +104,7 @@
             "formatString": "0",
             "sourceProviderType": "int",
             "sourceLineageTag": "ProductID",
-            "summarizeBy": "none",
+            "summarizeBy": "sum",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
@@ -146,7 +146,7 @@
             "sourceColumn": "Price",
             "sourceProviderType": "decimal",
             "sourceLineageTag": "Price",
-            "summarizeBy": "none",
+            "summarizeBy": "sum",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
@@ -170,7 +170,7 @@
         "annotations": [
           {
             "name": "IsTableInBiModel",
-            "value": "True"
+            "value": "False"
           }
         ]
       },
@@ -185,7 +185,7 @@
             "formatString": "0",
             "sourceProviderType": "int",
             "sourceLineageTag": "SaleID",
-            "summarizeBy": "count",
+            "summarizeBy": "sum",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
@@ -200,7 +200,7 @@
             "formatString": "0",
             "sourceProviderType": "int",
             "sourceLineageTag": "CustomerID",
-            "summarizeBy": "none",
+            "summarizeBy": "sum",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
@@ -215,7 +215,7 @@
             "formatString": "0",
             "sourceProviderType": "int",
             "sourceLineageTag": "ProductID",
-            "summarizeBy": "none",
+            "summarizeBy": "sum",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
@@ -269,29 +269,41 @@
         "annotations": [
           {
             "name": "IsTableInBiModel",
-            "value": "True"
+            "value": "False"
           }
         ]
       }
     ],
     "relationships": [
       {
-        "name": "66e1e41f-24cc-4043-b12d-8b4a3a4b4df6",
-        "fromTable": "Sales",
-        "fromColumn": "CustomerID",
-        "toTable": "Customers",
-        "toColumn": "CustomerID",
-        "relyOnReferentialIntegrity": true,
-        "securityFilteringBehavior": "none"
-      },
-      {
-        "name": "9097abe3-dd4a-4612-ab36-f844aa2df6af",
+        "name": "c8ee9ad7-d861-4160-babb-c78e04ebc86d",
         "fromTable": "Sales",
         "fromColumn": "ProductID",
         "toTable": "Products",
         "toColumn": "ProductID",
         "relyOnReferentialIntegrity": true,
-        "securityFilteringBehavior": "none"
+        "securityFilteringBehavior": "none",
+        "annotations": [
+          {
+            "name": "__RelationshipProperties",
+            "value": "{\"constraintName\":\"\",\"needRecreation\":false,\"isUserCreated\":true}"
+          }
+        ]
+      },
+      {
+        "name": "db8b970e-2ee8-447f-9a34-b8f357a49d01",
+        "fromTable": "Sales",
+        "fromColumn": "CustomerID",
+        "toTable": "Customers",
+        "toColumn": "CustomerID",
+        "relyOnReferentialIntegrity": true,
+        "securityFilteringBehavior": "none",
+        "annotations": [
+          {
+            "name": "__RelationshipProperties",
+            "value": "{\"constraintName\":\"\",\"needRecreation\":false,\"isUserCreated\":true}"
+          }
+        ]
       }
     ],
     "expressions": [
@@ -308,7 +320,7 @@
       },
       {
         "name": "PBI_QueryOrder",
-        "value": "[\"exec_requests_history\",\"long_running_queries\",\"frequently_run_queries\",\"exec_sessions_history\",\"Customers\",\"Products\",\"Sales\"]"
+        "value": "[\"Products\",\"Sales\",\"Customers\"]"
       },
       {
         "name": "SourceLineageTagType",
