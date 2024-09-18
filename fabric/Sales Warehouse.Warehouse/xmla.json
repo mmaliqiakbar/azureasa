@@ -276,11 +276,11 @@
     ],
     "relationships": [
       {
-        "name": "c8ee9ad7-d861-4160-babb-c78e04ebc86d",
+        "name": "d2eea0f4-a6d5-4f82-89bf-c145471946ca",
         "fromTable": "Sales",
-        "fromColumn": "ProductID",
-        "toTable": "Products",
-        "toColumn": "ProductID",
+        "fromColumn": "CustomerID",
+        "toTable": "Customers",
+        "toColumn": "CustomerID",
         "relyOnReferentialIntegrity": true,
         "securityFilteringBehavior": "none",
         "annotations": [
@@ -291,11 +291,11 @@
         ]
       },
       {
-        "name": "db8b970e-2ee8-447f-9a34-b8f357a49d01",
+        "name": "a04122be-012e-4117-9e4b-72de4eb39132",
         "fromTable": "Sales",
-        "fromColumn": "CustomerID",
-        "toTable": "Customers",
-        "toColumn": "CustomerID",
+        "fromColumn": "ProductID",
+        "toTable": "Products",
+        "toColumn": "ProductID",
         "relyOnReferentialIntegrity": true,
         "securityFilteringBehavior": "none",
         "annotations": [
@@ -320,7 +320,7 @@
       },
       {
         "name": "PBI_QueryOrder",
-        "value": "[\"Products\",\"Sales\",\"Customers\"]"
+        "value": "[\"exec_requests_history\",\"long_running_queries\",\"frequently_run_queries\",\"exec_sessions_history\",\"Customers\",\"Products\",\"Sales\"]"
       },
       {
         "name": "SourceLineageTagType",
